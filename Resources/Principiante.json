@@ -1,0 +1,6 @@
+{
+  "velocidadSerpiente":100,
+  "tiempoReaparicionFruta":8000,
+  "cantidadObstaculos": 10,
+  "tiempoObstaculos": 4000
+}
