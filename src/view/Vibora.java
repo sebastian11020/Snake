@@ -11,6 +11,8 @@ import model.PuntajeManager;
 import java.util.LinkedList;
 
 public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener {
+    private long lastDirectionChangeTime = 0;
+    private static final long DIRECTION_CHANGE_DELAY = 100;
     private LinkedList<Punto> lista = new LinkedList<Punto>();
     private LinkedList<Obstaculo> obstaculos = new LinkedList<Obstaculo>();
     private JButton volverAlMenuButton;
@@ -199,6 +201,11 @@ public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener
     }
 
     public void keyPressed(KeyEvent arg0) {
+        long currentTime = System.currentTimeMillis();
+        if (currentTime - lastDirectionChangeTime < DIRECTION_CHANGE_DELAY) {
+            return;
+        }
+
         if (arg0.getKeyCode() == KeyEvent.VK_RIGHT && direccion != Direccion.IZQUIERDA) {
             direccion = Direccion.DERECHA;
         }
@@ -211,6 +218,8 @@ public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener
         if (arg0.getKeyCode() == KeyEvent.VK_DOWN && direccion != Direccion.SUBE) {
             direccion = Direccion.BAJA;
         }
+
+        lastDirectionChangeTime = currentTime;
     }
 
 
