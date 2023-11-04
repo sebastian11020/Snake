@@ -15,6 +15,7 @@ public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener
     private LinkedList<Obstaculo> obstaculos = new LinkedList<Obstaculo>();
     private JButton volverAlMenuButton;
     private int columna, fila, colfruta, filfruta;
+    private int crecimientoSerpiente;
     private int crecimiento = 0;
     private int puntuacion = 0;
     private int velocidadSerpiente;
@@ -189,7 +190,7 @@ public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener
         if (columna == colfruta && fila == filfruta) {
             colfruta = (int) (Math.random() * 50);
             filfruta = (int) (Math.random() * 50);
-            crecimiento = 5;
+            crecimiento = crecimientoSerpiente;
             incrementarPuntuacion(10);
             return true;
         } else {
@@ -258,6 +259,7 @@ public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener
         tiempoReaparicionFruta = dificultad.getTiempoReaparicionFruta();
         cantidadObstaculos = dificultad.getCantidadObstaculos();
         tiempoObstaculos = dificultad.getTiempoObstaculos();
+        crecimientoSerpiente=dificultad.getCrecimiento();
     }
 
     private void mostrarMensajePerdiste(String mensaje) {

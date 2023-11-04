@@ -1,4 +1,5 @@
 {
+  "crecimiento": 5,
   "velocidadSerpiente":100,
   "tiempoReaparicionFruta":8000,
   "cantidadObstaculos": 10,
