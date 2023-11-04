@@ -1,5 +1,5 @@
 # Snake
-Ruta de los archivos 
+.Ruta de los archivos 
 SnakeGame/
 │
 ├── Resources/
@@ -8,7 +8,7 @@ SnakeGame/
 │   ├── Medio.json        # Configuración para el nivel Medio
 │   ├── Avanzado.json     # Configuración para el nivel Avanzado
 
-#Cómo Jugar
+.Cómo Jugar
 Usa las teclas de flecha (arriba, abajo, izquierda, derecha) para mover la serpiente.
 El objetivo es comer frutas para aumentar tu puntuación por cada fruta que comas obtendras 10 puntos.
 Evita chocar con la serpiente misma y con los obstáculos.
