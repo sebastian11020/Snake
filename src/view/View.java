@@ -34,6 +34,8 @@ public class View {
         JLabel nick = new JLabel("Nick name");
         JButton play = new JButton("Jugar");
         JButton verHistorial = new JButton("Ver Historial");
+        JButton creditosButton = new JButton("Créditos");
+        creditosButton.setBackground(colorFondo2);
         verHistorial.setBackground(colorFondo2);
         play.setBackground(colorFondo2);
         panelTittle.add(tittle);
@@ -41,6 +43,7 @@ public class View {
         panelmenu.add(nickname);
         panelmenu.add(play);
         panelmenu.add(verHistorial);
+        panelmenu.add(creditosButton);
         menu.getContentPane().add(BorderLayout.NORTH, panelTittle);
         menu.getContentPane().add(BorderLayout.CENTER, panelmenu);
         menu.setVisible(true);
@@ -60,6 +63,11 @@ public class View {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mostrarHistorialPuntajes();
+            }
+        });
+        creditosButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                mostrarCreditos();
             }
         });
     }
@@ -85,6 +93,16 @@ public class View {
         ventanaHistorial.add(scrollPane);
 
         ventanaHistorial.setVisible(true);
+    }
+
+    private void mostrarCreditos() {
+        JOptionPane.showMessageDialog(null,
+                "Nombre Estudiante: Sebastian Daza Delgadillo\n" +
+                        "Código: 202127792\n" +
+                        "Facultad: Ingeniería\n"+
+                        "Escuela: Ingenieria de sistemas",
+                "Créditos",
+                JOptionPane.INFORMATION_MESSAGE);
     }
 
     public List<Puntaje> cargarPuntajesDesdeArchivo() {
