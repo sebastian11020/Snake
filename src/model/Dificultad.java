@@ -31,5 +31,6 @@ public class Dificultad implements Serializable {
     public int getCantidadObstaculos() {
         return cantidadObstaculos;
     }
+    public int getCrecimiento(){return crecimiento;}
 }
 
