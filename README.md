@@ -1,5 +1,5 @@
 # Snake
-#Ruta de los archivos 
+Ruta de los archivos 
 SnakeGame/
 │
 ├── Resources/
