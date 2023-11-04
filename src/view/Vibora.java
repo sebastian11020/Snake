@@ -199,19 +199,20 @@ public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener
     }
 
     public void keyPressed(KeyEvent arg0) {
-        if (arg0.getKeyCode() == KeyEvent.VK_RIGHT) {
+        if (arg0.getKeyCode() == KeyEvent.VK_RIGHT && direccion != Direccion.IZQUIERDA) {
             direccion = Direccion.DERECHA;
         }
-        if (arg0.getKeyCode() == KeyEvent.VK_LEFT) {
+        if (arg0.getKeyCode() == KeyEvent.VK_LEFT && direccion != Direccion.DERECHA) {
             direccion = Direccion.IZQUIERDA;
         }
-        if (arg0.getKeyCode() == KeyEvent.VK_UP) {
+        if (arg0.getKeyCode() == KeyEvent.VK_UP && direccion != Direccion.BAJA) {
             direccion = Direccion.SUBE;
         }
-        if (arg0.getKeyCode() == KeyEvent.VK_DOWN) {
+        if (arg0.getKeyCode() == KeyEvent.VK_DOWN && direccion != Direccion.SUBE) {
             direccion = Direccion.BAJA;
         }
     }
+
 
     public void keyReleased(KeyEvent arg0) {
     }
