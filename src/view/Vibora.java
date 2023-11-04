@@ -15,7 +15,7 @@ public class Vibora extends JFrame implements Runnable, KeyListener,MenuListener
     private LinkedList<Obstaculo> obstaculos = new LinkedList<Obstaculo>();
     private JButton volverAlMenuButton;
     private int columna, fila, colfruta, filfruta;
-    private int crecimientoSerpiente;
+    private int crecimientoSerpiente = 0;
     private int crecimiento = 0;
     private int puntuacion = 0;
     private int velocidadSerpiente;
