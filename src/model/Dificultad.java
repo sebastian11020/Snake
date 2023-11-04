@@ -6,14 +6,16 @@ public class Dificultad implements Serializable {
     private int tiempoReaparicionFruta;
     private int cantidadObstaculos;
     private int tiempoObstaculos;
+    private int crecimiento;
     public Dificultad() {
     }
 
-    public Dificultad(int velocidadSerpiente, int tiempoReaparicionFruta, int cantidadObstaculos,int tiempoObstaculos) {
+    public Dificultad(int velocidadSerpiente, int tiempoReaparicionFruta, int cantidadObstaculos,int tiempoObstaculos,int crecimiento) {
         this.velocidadSerpiente = velocidadSerpiente;
         this.tiempoReaparicionFruta = tiempoReaparicionFruta;
         this.cantidadObstaculos = cantidadObstaculos;
         this.tiempoObstaculos=tiempoObstaculos;
+        this.crecimiento=crecimiento;
     }
 
     public int getVelocidadSerpiente() {
